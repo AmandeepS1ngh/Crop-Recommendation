@@ -1,0 +1,114 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        p { font-size: 18px; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 5px 0; }
+        a { color: #4CAF50; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>The recommended crop is: <strong>{{ result.predicted_crop }}</strong></p>
+    <h2>Top 3 Predictions:</h2>
+    <ul>
+        {% for pred in result.top_predictions %}
+            <li>{{ pred.crop }}: {{ pred.probability }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Make another prediction</a>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <style>
+        body {
+            background-color: #f1f5f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            margin-top: 60px;
+        }
+        .card {
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+    </style> -->
+    <style>
+        body {
+            background-image: url("/static/bgimage.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            margin-top: 60px;
+        }
+        .card {
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0,0,0,86%);
+            background-color: rgba(255, 255, 255, 62%); /* Optional: make card slightly transparent for better contrast */
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+    </style>
+    
+</head>
+<body>
+
+
+    <!-- Result Section -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4 text-center">
+                    <h3 class="mb-3">Prediction Result</h3>
+                    <p class="fs-5">The recommended crop is:</p>
+                    <h2 class="text-success">{{ result.predicted_crop }}</h2>
+                    <hr>
+                    <h5 class="mt-4">Top 3 Predictions</h5>
+                    <ul class="list-group list-group-flush">
+                        {% for pred in result.top_predictions %}
+                            <li >
+                                <strong>{{ pred.crop }}</strong>
+                                <span>{{ pred.probability }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <a href="/" class="btn btn-primary mt-4">Make another prediction</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2025 Crop Prediction Project | Developed by Amandeep Singh</p>
+        </div>
+    </footer> -->
+
+</body>
+</html>
