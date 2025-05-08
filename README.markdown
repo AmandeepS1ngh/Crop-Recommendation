@@ -79,6 +79,3 @@ The model is trained on a dataset containing historical data of crop yields base
 | `templates/`           | Directory for HTML templates used by the Flask app.                        |
 | `tempCodeRunnerFile.py`| Temporary file, likely not essential for the project.                       |
 
-## License
-
-[Add your license here, e.g., MIT License]
