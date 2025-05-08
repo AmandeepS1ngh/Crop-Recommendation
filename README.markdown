@@ -46,12 +46,12 @@ This project is a web-based application that recommends suitable crops to grow b
 ### Input Form
 The input form allows users to enter soil and environmental parameters to get a crop recommendation.
 
-![Input Form](https://raw.githubusercontent.com/AmandeepS1ngh/Crop-Recommendation/main/screenshots/input_form.png)
+![Input Form](https://github.com/AmandeepS1ngh/Crop-Recommendation/blob/main/screenshots/input_form.jpg)
 
 ### Prediction Result
 After submitting the parameters, the app displays the recommended crop along with the top 3 predictions and their confidence scores.
 
-![Prediction Result](https://raw.githubusercontent.com/AmandeepS1ngh/Crop-Recommendation/main/screenshots/prediction_result.png)
+![Prediction Result](https://github.com/AmandeepS1ngh/Crop-Recommendation/blob/main/screenshots/input_form.jpg)
 
 ## Model Information
 
